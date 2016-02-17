@@ -4,13 +4,15 @@ public class vowel
 {
 	public static void main(String[] args) 
 	{
-		String s="how are45 sindhu67";
+		String s="how jasudnnh1244are45 sindhu67";
 		System.out.println("print vowels: ");
 		printVowels(s);
 		System.out.println("print consonants: ");
 		printConsonants(s);
 		System.out.println("print digits: ");
 		printDigits(s);
+		System.out.println("print expressions: ");
+		processExpression(s);
 	}
 
 	static void printVowels(String s) 
@@ -48,5 +50,13 @@ String digits="0123456789";
 				System.out.println(s.charAt(i));
 		}
 	}
+	}
+	static void processExpression(String s)
+	{
+	String answer="1";
+	String num1="56";
+	String num2="33";
+	 answer=num1+num2;
+	 System.out.println(answer);
 	}
 }
