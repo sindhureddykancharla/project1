@@ -4,7 +4,7 @@ public class vowel
 {
 	public static void main(String[] args) 
 	{
-		String s="how jasudnnh1244are45 sindhu67";
+		String s="is7";
 		System.out.println("print vowels: ");
 		printVowels(s);
 		System.out.println("print consonants: ");
@@ -54,7 +54,7 @@ String digits="0123456789";
 	static void processExpression(String s)
 	{
 	String answer="1";
-	String num1="56";
+	String num1="12";
 	String num2="33";
 	 answer=num1+num2;
 	 System.out.println(answer);
