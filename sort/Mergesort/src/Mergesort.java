@@ -5,30 +5,30 @@
 		 
 	      static public void Merge(int [] numbers, int left, int mid, int right)
 	      {
-	        int [] x = new int[25];
-	        int i, left_end, num_elements, y;
+	        int [] recc = new int[25];
+	        int i, left_end, num_elements, tmp_pos;
 	    
 	        left_end = (mid - 1);
-	        y = left;
+	        tmp_pos = left;
 	        num_elements = (right - left + 1);
 	    
 	        while ((left <= left_end) && (mid <= right))
 	        {
 	            if (numbers[left] <= numbers[mid])
-	                x[y++] = numbers[left++];
+	                recc[tmp_pos++] = numbers[left++];
 	            else
-	                x[y++] = numbers[mid++];
+	                recc[tmp_pos++] = numbers[mid++];
 	        }
 	    
 	        while (left <= left_end)
-	            x[y++] = numbers[left++];
+	            recc[tmp_pos++] = numbers[left++];
 	 
 	        while (mid <= right)
-	            x[y++] = numbers[mid++];
+	            recc[tmp_pos++] = numbers[mid++];
 	 
 	        for (i = 0; i < num_elements; i++)
 	        {
-	            numbers[right] = x[right];
+	            numbers[right] = recc[right];
 	            right--;
 	        }
 	    }
@@ -50,7 +50,7 @@
 	 
 	    public static void main(String[] args)
 	      {
-	        int[] numbers = { 3, 8, 7, 5, 2, 1, 9, 6, 4,3};
+	        int[] numbers = { 3, 45, 7, 5, 2, 1, 9, 998, 4,3};
 	        int length = 10;
 	 
 	  
