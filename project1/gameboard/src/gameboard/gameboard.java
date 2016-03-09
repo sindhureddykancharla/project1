@@ -2,9 +2,7 @@ package gameboard;
 import java.util.Scanner;
 public class gameboard 
 {
-    private static Scanner input;
-
-	public static boolean putDisk(char[][] field, int column, char color) 
+    public static boolean putDisk(char[][] field, int column, char color) 
     {
         if (field[0][column] != ' ')
             return false;
@@ -58,8 +56,8 @@ public class gameboard
         if (winner != ' ') return winner;
     
             
-        for (int i = 0; i < field.length; i++)
-            for (int j = 0; j < field[i].length; j++)
+        for (int i = 0; i < field.length; ++i)
+            for (int j = 0; j < field[i].length; ++j)
                 if (field[i][j] == ' ') return ' ';
 
         return 'C';
@@ -82,7 +80,7 @@ public class gameboard
 
     public static void main(String[] args)
     {
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
      
         char[][] field = new char[7][7];
 
